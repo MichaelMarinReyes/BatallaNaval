@@ -1,7 +1,5 @@
 package com.backend.principal;
 
-import com.frontend.ventanaprincipal.Principal;
-
 /**
  *
  * @author michael
@@ -9,7 +7,7 @@ import com.frontend.ventanaprincipal.Principal;
 public class Main {
 
     public static void main(String[] args) {
-        Principal ventana = new Principal();
-        ventana.setVisible(true);
+        DinamicaJuego juego = new DinamicaJuego();
+        juego.comenzarJuego();
     }
 }
