@@ -7,7 +7,7 @@ package com.backend.principal;
 public class Main {
 
     public static void main(String[] args) {
-        DinamicaJuego juego = new DinamicaJuego();
+        MenuPrincipal juego = new MenuPrincipal();
         juego.comenzarJuego();
     }
 }
