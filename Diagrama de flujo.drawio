@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-30T23:24:09.154Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="Bi3OgHU1bHiuX8yK20bL" version="21.1.2" type="device">
+<mxfile host="app.diagrams.net" modified="2023-04-03T16:21:19.709Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="cXKbqOu9s3TWy5l3i4xa" version="21.1.2" type="device">
   <diagram name="Página-1" id="up39gmnO_o5E0UOpGgPX">
     <mxGraphModel dx="2688" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -8,474 +8,474 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-1" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Inicio&lt;/font&gt;&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="364" y="20" width="100" height="100" as="geometry" />
+          <mxGeometry x="784" y="70" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-8" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CabLyYHGJtXLeLVNCOU3-6" target="CabLyYHGJtXLeLVNCOU3-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-6" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar Menú Principal&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="354" y="330" width="120" height="80" as="geometry" />
+          <mxGeometry x="774" y="380" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-7" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Acción de click en botón&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="354" y="490" width="120" height="120" as="geometry" />
+          <mxGeometry x="774" y="540" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-9" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-16" target="CabLyYHGJtXLeLVNCOU3-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="270" y="670" as="sourcePoint" />
-            <mxPoint x="280" y="545" as="targetPoint" />
+            <mxPoint x="690" y="720" as="sourcePoint" />
+            <mxPoint x="700" y="595" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-10" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-17" target="CabLyYHGJtXLeLVNCOU3-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="398" y="578" as="sourcePoint" />
-            <mxPoint x="280" y="630" as="targetPoint" />
+            <mxPoint x="818" y="628" as="sourcePoint" />
+            <mxPoint x="700" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-11" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-22" target="CabLyYHGJtXLeLVNCOU3-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="408" y="588" as="sourcePoint" />
-            <mxPoint x="430" y="680" as="targetPoint" />
+            <mxPoint x="828" y="638" as="sourcePoint" />
+            <mxPoint x="850" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-12" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-25" target="CabLyYHGJtXLeLVNCOU3-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="418" y="598" as="sourcePoint" />
-            <mxPoint x="510" y="610" as="targetPoint" />
+            <mxPoint x="838" y="648" as="sourcePoint" />
+            <mxPoint x="930" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-30" target="CabLyYHGJtXLeLVNCOU3-28" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="428" y="608" as="sourcePoint" />
-            <mxPoint x="560" y="545" as="targetPoint" />
+            <mxPoint x="848" y="658" as="sourcePoint" />
+            <mxPoint x="980" y="595" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-14" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar opciones de Inicio de Partida&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="-80" y="380" width="120" height="80" as="geometry" />
+          <mxGeometry x="340" y="430" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-15" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-7" target="CabLyYHGJtXLeLVNCOU3-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="354" y="550" as="sourcePoint" />
-            <mxPoint x="250" y="550" as="targetPoint" />
+            <mxPoint x="774" y="600" as="sourcePoint" />
+            <mxPoint x="670" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-16" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;boton1&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="240" y="480" width="60" height="30" as="geometry" />
+          <mxGeometry x="660" y="530" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-18" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar opciones de Nueva Partida&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="585" width="120" height="80" as="geometry" />
+          <mxGeometry x="540" y="635" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-19" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-7" target="CabLyYHGJtXLeLVNCOU3-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="382" y="578" as="sourcePoint" />
-            <mxPoint x="276" y="670" as="targetPoint" />
+            <mxPoint x="802" y="628" as="sourcePoint" />
+            <mxPoint x="696" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-17" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;boton2&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="280" y="570" width="60" height="30" as="geometry" />
+          <mxGeometry x="700" y="620" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CabLyYHGJtXLeLVNCOU3-20" target="NV9xMTkCbuvVknq5jLuJ-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-20" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar Puntajes&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="354" y="690" width="120" height="80" as="geometry" />
+          <mxGeometry x="774" y="740" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-21" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-7" target="CabLyYHGJtXLeLVNCOU3-22" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="414" y="610" as="sourcePoint" />
-            <mxPoint x="414" y="690" as="targetPoint" />
+            <mxPoint x="834" y="660" as="sourcePoint" />
+            <mxPoint x="834" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-22" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;boton3&lt;br&gt;&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="384" y="625" width="60" height="30" as="geometry" />
+          <mxGeometry x="804" y="675" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-23" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar Colección de Tableros&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="560" y="680" width="120" height="80" as="geometry" />
+          <mxGeometry x="980" y="730" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-24" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-7" target="CabLyYHGJtXLeLVNCOU3-25" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="447" y="577" as="sourcePoint" />
-            <mxPoint x="572" y="680" as="targetPoint" />
+            <mxPoint x="867" y="627" as="sourcePoint" />
+            <mxPoint x="992" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-25" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;boton4&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="480" y="610" width="60" height="30" as="geometry" />
+          <mxGeometry x="900" y="660" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-28" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Fin&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="640" y="500" width="100" height="100" as="geometry" />
+          <mxGeometry x="1060" y="550" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-29" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-7" target="CabLyYHGJtXLeLVNCOU3-30" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="472" y="548" as="sourcePoint" />
-            <mxPoint x="610" y="542" as="targetPoint" />
+            <mxPoint x="892" y="598" as="sourcePoint" />
+            <mxPoint x="1030" y="592" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-30" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;boton5&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="530" y="535" width="60" height="30" as="geometry" />
+          <mxGeometry x="950" y="585" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-34" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-38" target="CabLyYHGJtXLeLVNCOU3-36" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="210" as="targetPoint" />
+            <mxPoint x="780" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-31" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Primera Ejecución&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="374" y="170" width="80" height="80" as="geometry" />
+          <mxGeometry x="794" y="220" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CabLyYHGJtXLeLVNCOU3-36" target="CabLyYHGJtXLeLVNCOU3-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="240" y="360" />
+              <mxPoint x="660" y="410" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-36" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Deshabilitar boton1&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="183" y="187.5" width="94" height="45" as="geometry" />
+          <mxGeometry x="603" y="237.5" width="94" height="45" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-37" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-31" target="CabLyYHGJtXLeLVNCOU3-38" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="294" y="210" as="targetPoint" />
-            <mxPoint x="374" y="210" as="sourcePoint" />
+            <mxPoint x="714" y="260" as="targetPoint" />
+            <mxPoint x="794" y="260" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-38" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Si&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="310" y="195" width="30" height="30" as="geometry" />
+          <mxGeometry x="730" y="245" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-42" target="CabLyYHGJtXLeLVNCOU3-6" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" y="210" as="targetPoint" />
+            <mxPoint x="1060" y="260" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-41" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" parent="1" source="CabLyYHGJtXLeLVNCOU3-31" target="CabLyYHGJtXLeLVNCOU3-42" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="621" y="255" as="targetPoint" />
-            <mxPoint x="701" y="255" as="sourcePoint" />
+            <mxPoint x="1041" y="305" as="targetPoint" />
+            <mxPoint x="1121" y="305" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-42" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;No&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="399" y="270" width="30" height="30" as="geometry" />
+          <mxGeometry x="819" y="320" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-46" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CabLyYHGJtXLeLVNCOU3-18" target="CabLyYHGJtXLeLVNCOU3-51" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="217" y="830" as="targetPoint" />
-            <mxPoint x="217" y="760" as="sourcePoint" />
+            <mxPoint x="637" y="880" as="targetPoint" />
+            <mxPoint x="637" y="810" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-49" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CabLyYHGJtXLeLVNCOU3-51" target="CabLyYHGJtXLeLVNCOU3-52" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="230" y="890" as="sourcePoint" />
-            <mxPoint x="230" y="940" as="targetPoint" />
+            <mxPoint x="650" y="940" as="sourcePoint" />
+            <mxPoint x="650" y="990" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-47" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Ociones de submenú&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-65.5" y="750" width="91" height="90" as="geometry" />
+          <mxGeometry x="354.5" y="800" width="91" height="90" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-50" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="CabLyYHGJtXLeLVNCOU3-52" target="CabLyYHGJtXLeLVNCOU3-47" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="229.89655172413813" y="1000" as="sourcePoint" />
+            <mxPoint x="649.8965517241381" y="1050" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-20" y="920" />
+              <mxPoint x="400" y="970" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-51" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar previsualizador de texto&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="730" width="120" height="80" as="geometry" />
+          <mxGeometry x="540" y="780" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CabLyYHGJtXLeLVNCOU3-52" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar submenú de nueva partida&lt;/font&gt;&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="880" width="120" height="80" as="geometry" />
+          <mxGeometry x="540" y="930" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-4" target="CabLyYHGJtXLeLVNCOU3-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="550" y="1150" as="sourcePoint" />
-            <mxPoint x="830" y="1115" as="targetPoint" />
+            <mxPoint x="970" y="1200" as="sourcePoint" />
+            <mxPoint x="1250" y="1165" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-47" target="NV9xMTkCbuvVknq5jLuJ-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="275" y="1115" as="sourcePoint" />
-            <mxPoint x="377" y="410" as="targetPoint" />
+            <mxPoint x="695" y="1165" as="sourcePoint" />
+            <mxPoint x="797" y="460" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-4" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Boton Regresar&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="50" y="520" width="60" height="30" as="geometry" />
+          <mxGeometry x="470" y="570" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-5" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-7" target="CabLyYHGJtXLeLVNCOU3-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="310" y="890" as="sourcePoint" />
-            <mxPoint x="360" y="840" as="targetPoint" />
+            <mxPoint x="730" y="940" as="sourcePoint" />
+            <mxPoint x="780" y="890" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-6" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-47" target="NV9xMTkCbuvVknq5jLuJ-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="186" y="1113" as="sourcePoint" />
-            <mxPoint x="157" y="590" as="targetPoint" />
+            <mxPoint x="606" y="1163" as="sourcePoint" />
+            <mxPoint x="577" y="640" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-20" y="690" />
+              <mxPoint x="400" y="740" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-7" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Boton Siguiente&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-50" y="590" width="60" height="30" as="geometry" />
+          <mxGeometry x="370" y="640" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-9" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-14" target="NV9xMTkCbuvVknq5jLuJ-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint y="640" as="sourcePoint" />
-            <mxPoint x="-170" y="420" as="targetPoint" />
+            <mxPoint x="420" y="690" as="sourcePoint" />
+            <mxPoint x="250" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-10" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Elegir Nivel&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-250" y="380" width="80" height="80" as="geometry" />
+          <mxGeometry x="170" y="430" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-11" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-23" target="NV9xMTkCbuvVknq5jLuJ-21" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-120" y="640" as="sourcePoint" />
-            <mxPoint x="-210" y="660" as="targetPoint" />
+            <mxPoint x="300" y="690" as="sourcePoint" />
+            <mxPoint x="210" y="710" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-13" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-20" target="NV9xMTkCbuvVknq5jLuJ-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-120" y="640" as="sourcePoint" />
-            <mxPoint x="-150" y="610" as="targetPoint" />
+            <mxPoint x="300" y="690" as="sourcePoint" />
+            <mxPoint x="270" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-14" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-16" target="NV9xMTkCbuvVknq5jLuJ-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-120" y="640" as="sourcePoint" />
-            <mxPoint x="-290" y="570" as="targetPoint" />
+            <mxPoint x="300" y="690" as="sourcePoint" />
+            <mxPoint x="130" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-15" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar tablero pequeño, 4 bombas. 10 bombas normales&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-410" y="210" width="120" height="60" as="geometry" />
+          <mxGeometry x="10" y="260" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-17" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-10" target="NV9xMTkCbuvVknq5jLuJ-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-250" y="420" as="sourcePoint" />
-            <mxPoint x="-410" y="420" as="targetPoint" />
+            <mxPoint x="170" y="470" as="sourcePoint" />
+            <mxPoint x="10" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-16" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Boton Principiante&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-310" y="320" width="60" height="30" as="geometry" />
+          <mxGeometry x="110" y="370" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-18" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar tablero intermedio, 3 bombas, 9 bombas normales&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-540" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="-120" y="440" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-19" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-10" target="NV9xMTkCbuvVknq5jLuJ-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-232" y="438" as="sourcePoint" />
-            <mxPoint x="-372" y="550" as="targetPoint" />
+            <mxPoint x="188" y="488" as="sourcePoint" />
+            <mxPoint x="48" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-20" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Boton Intermedio&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-350" y="405" width="60" height="30" as="geometry" />
+          <mxGeometry x="70" y="455" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-21" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar tablero grande, 2 bombas, 5 bombas normales&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-410" y="590" width="120" height="60" as="geometry" />
+          <mxGeometry x="10" y="640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-22" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-10" target="NV9xMTkCbuvVknq5jLuJ-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-210" y="460" as="sourcePoint" />
-            <mxPoint x="-210" y="630" as="targetPoint" />
+            <mxPoint x="210" y="510" as="sourcePoint" />
+            <mxPoint x="210" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-23" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Boton Titán&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-290" y="510" width="60" height="30" as="geometry" />
+          <mxGeometry x="130" y="560" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-39" target="NV9xMTkCbuvVknq5jLuJ-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-24" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar Mapa y opciones de partida&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-800" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="-380" y="440" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-25" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-21" target="NV9xMTkCbuvVknq5jLuJ-24" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-360" y="680" as="sourcePoint" />
-            <mxPoint x="-310" y="630" as="targetPoint" />
+            <mxPoint x="60" y="730" as="sourcePoint" />
+            <mxPoint x="110" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-26" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-15" target="NV9xMTkCbuvVknq5jLuJ-24" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-230" y="700" as="sourcePoint" />
-            <mxPoint x="-350" y="820" as="targetPoint" />
+            <mxPoint x="190" y="750" as="sourcePoint" />
+            <mxPoint x="70" y="870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-27" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-18" target="NV9xMTkCbuvVknq5jLuJ-24" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-220" y="710" as="sourcePoint" />
-            <mxPoint x="-340" y="830" as="targetPoint" />
+            <mxPoint x="200" y="760" as="sourcePoint" />
+            <mxPoint x="80" y="880" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-28" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Escribir archivo de registros&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="354" y="860" width="120" height="60" as="geometry" />
+          <mxGeometry x="774" y="910" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-30" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar cambios de mapa&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1410" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="-990" y="440" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-31" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Opciones de Juego&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1130" y="370" width="103" height="100" as="geometry" />
+          <mxGeometry x="-710" y="420" width="103" height="100" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-33" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-35" target="CabLyYHGJtXLeLVNCOU3-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-690" y="600" as="sourcePoint" />
-            <mxPoint x="-720" y="360" as="targetPoint" />
+            <mxPoint x="-270" y="650" as="sourcePoint" />
+            <mxPoint x="-300" y="410" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-1078" y="80" />
-              <mxPoint x="120" y="80" />
-              <mxPoint x="120" y="380" />
+              <mxPoint x="-658" y="130" />
+              <mxPoint x="540" y="130" />
+              <mxPoint x="540" y="430" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-34" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-31" target="NV9xMTkCbuvVknq5jLuJ-35" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-948" y="370" as="sourcePoint" />
-            <mxPoint x="214" y="242" as="targetPoint" />
+            <mxPoint x="-528" y="420" as="sourcePoint" />
+            <mxPoint x="634" y="292" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-35" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Rendirse&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-1108.5" y="225" width="60" height="30" as="geometry" />
+          <mxGeometry x="-688.5" y="275" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-37" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-24" target="NV9xMTkCbuvVknq5jLuJ-36" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-800" y="420" as="sourcePoint" />
-            <mxPoint x="-1027" y="420" as="targetPoint" />
+            <mxPoint x="-380" y="470" as="sourcePoint" />
+            <mxPoint x="-607" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-36" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Seguir vivo&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-918.5" y="380" width="80" height="80" as="geometry" />
+          <mxGeometry x="-498.5" y="430" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-38" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-36" target="NV9xMTkCbuvVknq5jLuJ-39" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-950" y="420" as="sourcePoint" />
-            <mxPoint x="-1027" y="420" as="targetPoint" />
+            <mxPoint x="-530" y="470" as="sourcePoint" />
+            <mxPoint x="-607" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-39" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Si&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-995" y="407.5" width="28" height="25" as="geometry" />
+          <mxGeometry x="-575" y="457.5" width="28" height="25" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-40" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-42" target="CabLyYHGJtXLeLVNCOU3-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-750" y="360" as="sourcePoint" />
-            <mxPoint x="-700" y="310" as="targetPoint" />
+            <mxPoint x="-330" y="410" as="sourcePoint" />
+            <mxPoint x="-280" y="360" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-520" y="170" />
-              <mxPoint x="-130" y="180" />
+              <mxPoint x="-100" y="220" />
+              <mxPoint x="290" y="230" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-41" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-36" target="NV9xMTkCbuvVknq5jLuJ-42" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-855" y="404" as="sourcePoint" />
-            <mxPoint x="-38" y="380" as="targetPoint" />
+            <mxPoint x="-435" y="454" as="sourcePoint" />
+            <mxPoint x="382" y="430" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-42" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;No&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-730" y="280" width="30" height="25" as="geometry" />
+          <mxGeometry x="-310" y="330" width="30" height="25" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-43" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-45" target="NV9xMTkCbuvVknq5jLuJ-30" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-1020" y="480" as="sourcePoint" />
-            <mxPoint x="-970" y="430" as="targetPoint" />
+            <mxPoint x="-600" y="530" as="sourcePoint" />
+            <mxPoint x="-550" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-44" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-31" target="NV9xMTkCbuvVknq5jLuJ-45" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-1130" y="420" as="sourcePoint" />
-            <mxPoint x="-1290" y="420" as="targetPoint" />
+            <mxPoint x="-710" y="470" as="sourcePoint" />
+            <mxPoint x="-870" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-45" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Click en casilla&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-1230" y="405" width="60" height="30" as="geometry" />
+          <mxGeometry x="-810" y="455" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-46" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-30" target="NV9xMTkCbuvVknq5jLuJ-24" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-1020" y="470" as="sourcePoint" />
-            <mxPoint x="-970" y="420" as="targetPoint" />
+            <mxPoint x="-600" y="520" as="sourcePoint" />
+            <mxPoint x="-550" y="470" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-1350" y="530" />
-              <mxPoint x="-740" y="530" />
+              <mxPoint x="-930" y="580" />
+              <mxPoint x="-320" y="580" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-47" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-28" target="CabLyYHGJtXLeLVNCOU3-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="520" y="770" as="sourcePoint" />
-            <mxPoint x="730" y="900" as="targetPoint" />
+            <mxPoint x="940" y="820" as="sourcePoint" />
+            <mxPoint x="1150" y="950" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="770" y="890" />
-              <mxPoint x="770" y="370" />
+              <mxPoint x="1190" y="940" />
+              <mxPoint x="1190" y="420" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-49" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="CabLyYHGJtXLeLVNCOU3-23" target="NV9xMTkCbuvVknq5jLuJ-50" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="700" as="sourcePoint" />
-            <mxPoint x="760" y="1050" as="targetPoint" />
+            <mxPoint x="950" y="750" as="sourcePoint" />
+            <mxPoint x="1180" y="1100" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-50" target="NV9xMTkCbuvVknq5jLuJ-51" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-50" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Mostrar tableros cargados&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="820" y="690" width="120" height="60" as="geometry" />
+          <mxGeometry x="1240" y="740" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-51" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Subir tablero o Regresar&lt;/font&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1050" y="657.5" width="120" height="125" as="geometry" />
+          <mxGeometry x="1470" y="707.5" width="120" height="125" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-53" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-55" target="CabLyYHGJtXLeLVNCOU3-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="870" y="680" as="sourcePoint" />
-            <mxPoint x="920" y="630" as="targetPoint" />
+            <mxPoint x="1290" y="730" as="sourcePoint" />
+            <mxPoint x="1340" y="680" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1110" y="370" />
+              <mxPoint x="1530" y="420" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-54" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-51" target="NV9xMTkCbuvVknq5jLuJ-55" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1110" y="657" as="sourcePoint" />
-            <mxPoint x="474" y="370" as="targetPoint" />
+            <mxPoint x="1530" y="707" as="sourcePoint" />
+            <mxPoint x="894" y="420" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-55" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Rgresar&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="1080" y="470" width="60" height="30" as="geometry" />
+          <mxGeometry x="1500" y="520" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-56" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-60" target="NV9xMTkCbuvVknq5jLuJ-58" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="870" y="1030" as="sourcePoint" />
-            <mxPoint x="920" y="980" as="targetPoint" />
+            <mxPoint x="1290" y="1080" as="sourcePoint" />
+            <mxPoint x="1340" y="1030" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-58" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Cargar tablero&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1050" y="920" width="120" height="60" as="geometry" />
+          <mxGeometry x="1470" y="970" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-59" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-51" target="NV9xMTkCbuvVknq5jLuJ-60" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1110" y="782" as="sourcePoint" />
-            <mxPoint x="1110" y="920" as="targetPoint" />
+            <mxPoint x="1530" y="832" as="sourcePoint" />
+            <mxPoint x="1530" y="970" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-60" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Subir tablero&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="1080" y="825" width="60" height="30" as="geometry" />
+          <mxGeometry x="1500" y="875" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-61" value="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;Guardar tablero&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="827" y="920" width="120" height="60" as="geometry" />
+          <mxGeometry x="1247" y="970" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-62" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-58" target="NV9xMTkCbuvVknq5jLuJ-61" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="870" y="1020" as="sourcePoint" />
-            <mxPoint x="920" y="970" as="targetPoint" />
+            <mxPoint x="1290" y="1070" as="sourcePoint" />
+            <mxPoint x="1340" y="1020" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NV9xMTkCbuvVknq5jLuJ-63" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="NV9xMTkCbuvVknq5jLuJ-61" target="CabLyYHGJtXLeLVNCOU3-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="870" y="1020" as="sourcePoint" />
-            <mxPoint x="920" y="970" as="targetPoint" />
+            <mxPoint x="1290" y="1070" as="sourcePoint" />
+            <mxPoint x="1340" y="1020" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="620" y="950" />
+              <mxPoint x="1040" y="1000" />
             </Array>
           </mxGeometry>
         </mxCell>

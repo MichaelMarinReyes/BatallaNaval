@@ -13,6 +13,7 @@ public class PuntajesPanel extends javax.swing.JPanel {
      */
     public PuntajesPanel() {
         initComponents();
+        setVisible(true);
     }
 
     /**

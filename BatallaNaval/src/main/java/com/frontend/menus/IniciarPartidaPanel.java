@@ -7,11 +7,11 @@ package com.frontend.menus;
 public class IniciarPartidaPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form IniciarPartida
+     * Creates new form IniciarPartidaPanel
      */
     public IniciarPartidaPanel() {
         initComponents();
-        this.setVisible(true);
+        setVisible(true);
     }
 
     /**
@@ -23,17 +23,15 @@ public class IniciarPartidaPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(255, 102, 153));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 499, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 384, Short.MAX_VALUE)
+            .addGap(0, 467, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

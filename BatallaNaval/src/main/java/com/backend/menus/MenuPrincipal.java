@@ -1,7 +1,7 @@
-package com.backend.principal;
+package com.backend.menus;
 
+import com.backend.principal.Usuario;
 import com.frontend.ventanaprincipal.JFramePrincipal;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,7 +14,7 @@ public class MenuPrincipal {
     Usuario jugador = new Usuario("", 0);
     JFramePrincipal ventana = new JFramePrincipal();
 
-    public void comenzarJuego() {
+    public void mostrarVentana() {
         String nombre = null;
         ventana.setVisible(true);
         registrarJugador();
@@ -22,12 +22,5 @@ public class MenuPrincipal {
     
     public void registrarJugador() {
         jugador.setNombre(ventana.getNombre());
-    }
-    
-    public void crearNuevaPartida() {
-        if (validarPrimerJuego == true) {
-           
-        } else {
-        }
     }
 }
