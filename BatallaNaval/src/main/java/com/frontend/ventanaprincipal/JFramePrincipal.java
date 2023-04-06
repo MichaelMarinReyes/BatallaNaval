@@ -1,6 +1,8 @@
 package com.frontend.ventanaprincipal;
 
-import com.frontend.menus.MenuPanel;
+import com.backend.menus.NuevaPartida;
+import com.backend.menus.Puntaje;
+import com.frontend.menus.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -29,6 +31,10 @@ public class JFramePrincipal extends JFrame {
     private JTextField nombreUsuario;
     private String nombre;
 
+    IniciarPartidaPanel iniciarPartida = new IniciarPartidaPanel();
+    NuevaPartidaPanel nuevaPartida = new NuevaPartidaPanel();
+    PuntajesPanel puntajes = new PuntajesPanel();
+    ColeccionTablerosPanel tableros = new ColeccionTablerosPanel();
     BorderLayout borderLayout = new BorderLayout();
     GridLayout gridLayout = new GridLayout();
 
@@ -94,8 +100,8 @@ public class JFramePrincipal extends JFrame {
         panelContenedor.add(botonRegistrar);
 
     }
-
-    public void pintarPanel(JPanel panel) {
+    
+    private void pintarPanel(JPanel panel) {
         panelContenedor.setLayout(borderLayout);
         panelContenedor.removeAll();
         panelContenedor.add(panel);

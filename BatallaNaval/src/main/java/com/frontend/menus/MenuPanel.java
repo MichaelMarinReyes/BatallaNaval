@@ -1,24 +1,27 @@
 package com.frontend.menus;
 
 import com.frontend.ventanaprincipal.JFramePrincipal;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JPanel;
 
 /**
  *
  * @author michael
  */
-public class MenuPanel extends javax.swing.JPanel implements ActionListener{
+public class MenuPanel extends javax.swing.JPanel implements ActionListener {
 
     /**
      * Creates new form MenuPanel
      */
+    BorderLayout borderLayout = new BorderLayout();
     JFramePrincipal ventanaPrincipal = new JFramePrincipal();
     private IniciarPartidaPanel iniciarPanel;
     private NuevaPartidaPanel nuevaPartida;
     private PuntajesPanel puntaje;
     private ColeccionTablerosPanel tableros;
-    
+
     public MenuPanel() {
         initComponents();
     }
@@ -33,13 +36,16 @@ public class MenuPanel extends javax.swing.JPanel implements ActionListener{
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        panelMenu = new javax.swing.JPanel();
         iniciarBoton = new javax.swing.JButton();
         nuevaBoton = new javax.swing.JButton();
         puntajesBoton = new javax.swing.JButton();
         tableroBoton = new javax.swing.JButton();
         salirBoton = new javax.swing.JButton();
 
-        setLayout(new java.awt.GridBagLayout());
+        setLayout(new java.awt.BorderLayout());
+
+        panelMenu.setLayout(new java.awt.GridBagLayout());
 
         iniciarBoton.setText("Iniciar Partida");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -47,17 +53,17 @@ public class MenuPanel extends javax.swing.JPanel implements ActionListener{
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(102, 221, 0, 0);
-        add(iniciarBoton, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(109, 216, 0, 0);
+        panelMenu.add(iniciarBoton, gridBagConstraints);
 
         nuevaBoton.setText("Nueva Partida");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 221, 0, 0);
-        add(nuevaBoton, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(18, 213, 0, 0);
+        panelMenu.add(nuevaBoton, gridBagConstraints);
 
         puntajesBoton.setText("Puntajes");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -65,17 +71,17 @@ public class MenuPanel extends javax.swing.JPanel implements ActionListener{
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 234, 0, 0);
-        add(puntajesBoton, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(18, 228, 0, 0);
+        panelMenu.add(puntajesBoton, gridBagConstraints);
 
         tableroBoton.setText("Colección de Tablero");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridwidth = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(32, 190, 0, 187);
-        add(tableroBoton, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(18, 191, 0, 186);
+        panelMenu.add(tableroBoton, gridBagConstraints);
 
         salirBoton.setText("Salir");
         salirBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -87,8 +93,10 @@ public class MenuPanel extends javax.swing.JPanel implements ActionListener{
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 241, 117, 0);
-        add(salirBoton, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(18, 241, 124, 0);
+        panelMenu.add(salirBoton, gridBagConstraints);
+
+        add(panelMenu, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void salirBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBotonActionPerformed
@@ -99,6 +107,7 @@ public class MenuPanel extends javax.swing.JPanel implements ActionListener{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton iniciarBoton;
     private javax.swing.JButton nuevaBoton;
+    private javax.swing.JPanel panelMenu;
     private javax.swing.JButton puntajesBoton;
     private javax.swing.JButton salirBoton;
     private javax.swing.JButton tableroBoton;
@@ -107,19 +116,27 @@ public class MenuPanel extends javax.swing.JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         Object evt = ae.getSource();
-        
+
         if (evt.equals(iniciarBoton)) {
             iniciarPanel = new IniciarPartidaPanel();
-            ventanaPrincipal.pintarPanel(iniciarPanel);
+            //panelMenu.pintarMenu(iniciarPanel);
         } else if (evt.equals(nuevaBoton)) {
             nuevaPartida = new NuevaPartidaPanel();
-            ventanaPrincipal.pintarPanel(nuevaPartida);
+           // panelMenu.pintarMenu(nuevaPartida);
         } else if (evt.equals(puntajesBoton)) {
             puntaje = new PuntajesPanel();
-            ventanaPrincipal.pintarPanel(puntaje);
+            //.pintarMenu(puntaje);
         } else if (evt.equals(tableroBoton)) {
             tableros = new ColeccionTablerosPanel();
-            ventanaPrincipal.pintarPanel(tableros);
+            //panelMenu.pintarMenu(tableros);
         }
+    }
+
+    private void pintarMenu(JPanel panel) {
+        panelMenu.setLayout(borderLayout);
+        panelMenu.removeAll();
+        panelMenu.add(panel);
+        panelMenu.repaint();
+        panelMenu.revalidate();
     }
 }

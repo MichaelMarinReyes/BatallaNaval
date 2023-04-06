@@ -6,4 +6,15 @@ package com.backend.menus;
  */
 public class NuevaPartida {
     
+    public void validarArregloVacio() {
+        crearNuevaPartida();
+    }
+    
+    public void mostrarPrevisualizador() {
+        
+    }
+    
+    public void crearNuevaPartida() {
+        
+    }
 }

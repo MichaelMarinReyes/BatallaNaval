@@ -1,5 +1,7 @@
 package com.frontend.menus;
 
+import com.backend.principal.Archivo;
+import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
 
 /**
@@ -28,11 +30,19 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
         panelBotones = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         panelPrevisualizador = new javax.swing.JPanel();
 
         jButton1.setText("Cargar Mapa");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Regresar");
+
+        jButton3.setText("Siguiente");
 
         javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
         panelBotones.setLayout(panelBotonesLayout);
@@ -41,9 +51,11 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
             .addGroup(panelBotonesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addContainerGap(292, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
         panelBotonesLayout.setVerticalGroup(
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -51,7 +63,8 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
                 .addGap(14, 14, 14)
                 .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -88,10 +101,18 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        Archivo archivo = new Archivo();
+        archivo.leerArchivoTh(chooser.getName());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelPrevisualizador;
     // End of variables declaration//GEN-END:variables
