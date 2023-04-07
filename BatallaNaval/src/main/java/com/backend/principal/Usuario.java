@@ -7,7 +7,10 @@ package com.backend.principal;
 public class Usuario {
 
     private String nombre;
-    private int puntos;
+    private int puntos = 0;
+
+    public Usuario() {
+    }
 
     public Usuario(String nombre, int puntos) {
         this.nombre = nombre;

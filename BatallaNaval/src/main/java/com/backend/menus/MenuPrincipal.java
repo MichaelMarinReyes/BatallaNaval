@@ -1,7 +1,8 @@
 package com.backend.menus;
 
 import com.backend.principal.Usuario;
-import com.frontend.ventanaprincipal.JFramePrincipal;
+import com.frontend.ventanaymenus.PuntajesPanel;
+import com.frontend.ventanaymenus.FramePrincipal;
 
 /**
  *
@@ -12,7 +13,8 @@ public class MenuPrincipal {
     private boolean validarPrimerJuego = true;
     
     Usuario jugador = new Usuario("", 0);
-    JFramePrincipal ventana = new JFramePrincipal();
+    //JFramePrincipal ventana = new JFramePrincipal();
+    FramePrincipal ventana = new FramePrincipal();
 
     public void mostrarVentana() {
         String nombre = null;
@@ -21,6 +23,8 @@ public class MenuPrincipal {
     }
     
     public void registrarJugador() {
-        jugador.setNombre(ventana.getNombre());
+        //jugador.setNombre(ventana.getNombre());
+        PuntajesPanel copiaDatos = new PuntajesPanel();
+        copiaDatos.copiarDatos(jugador.getNombre(), jugador.getPuntos());
     }
 }

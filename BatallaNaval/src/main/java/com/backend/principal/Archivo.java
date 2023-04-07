@@ -9,7 +9,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -43,6 +47,7 @@ public class Archivo {
         BufferedReader bufer = null;
         String cadena;
         arhivo = new File(nombreArchivo + ".avn");
+        
         if (arhivo.exists()) {
             int conteo = 1;
             try {
@@ -56,7 +61,6 @@ public class Archivo {
         } else {
             JOptionPane.showMessageDialog(null, "Archivo no encontrado o nombre incorrecto");
         }
-
     }
 
     public void crearArchivoWar(String nombre, int puntos) { // para punteos
@@ -66,10 +70,16 @@ public class Archivo {
         PrintWriter escritor = null;
         String cadena;
         boolean existe;
-        war = new File (nombreArchivo+ ".war");
-        existe = war.exists();
+        war = new File(nombreArchivo + ".war");
+        if (war.exists()) {
+            JOptionPane.showMessageDialog(null, "el archivo ya existe");
+            existe = war.exists();
+        } else {
+            JOptionPane.showMessageDialog(null, "se creará el archivo");
+            existe = war.exists();
+        }
         try {
-            escritor = new PrintWriter(new DataOutputStream(new FileOutputStream(war, existe)));
+            escritor = new PrintWriter(new DataOutputStream(new FileOutputStream(war, true)));
             while ((cadena = entrada.readLine()) != null && cadena.length() > 0) {
                 if (datosCorrectos(cadena)) {
                     escritor.println(cadena);
@@ -81,9 +91,9 @@ public class Archivo {
             e.printStackTrace();
         }
     }
-    
+
     private boolean datosCorrectos(String cadena) {
-        
+
         return false;
     }
 }

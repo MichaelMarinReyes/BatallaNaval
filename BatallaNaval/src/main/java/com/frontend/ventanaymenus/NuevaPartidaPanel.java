@@ -1,6 +1,9 @@
-package com.frontend.menus;
+package com.frontend.ventanaymenus;
 
 import com.backend.principal.Archivo;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
 
@@ -10,12 +13,17 @@ import javax.swing.JTextArea;
  */
 public class NuevaPartidaPanel extends javax.swing.JPanel {
 
+    private JTextArea texto;
+    BorderLayout borderLayout = new BorderLayout();
+
     /**
      * Creates new form NuevaPartida
      */
     public NuevaPartidaPanel() {
         initComponents();
         setVisible(true);
+        panelBotones.setBackground(Color.DARK_GRAY);
+        mostrarMapas(mostrarMensajeDeCargaDeArchivo());
     }
 
     /**
@@ -28,21 +36,18 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         panelBotones = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        cargarMapaBoton = new javax.swing.JButton();
+        siguienteBoton = new javax.swing.JButton();
         panelPrevisualizador = new javax.swing.JPanel();
 
-        jButton1.setText("Cargar Mapa");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cargarMapaBoton.setText("Cargar Mapa");
+        cargarMapaBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cargarMapaBotonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Regresar");
-
-        jButton3.setText("Siguiente");
+        siguienteBoton.setText("Siguiente");
 
         javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
         panelBotones.setLayout(panelBotonesLayout);
@@ -50,21 +55,18 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotonesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(cargarMapaBoton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addComponent(siguienteBoton)
+                .addContainerGap(305, Short.MAX_VALUE))
         );
         panelBotonesLayout.setVerticalGroup(
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotonesLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(cargarMapaBoton)
+                    .addComponent(siguienteBoton))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -101,24 +103,23 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cargarMapaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarMapaBotonActionPerformed
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         Archivo archivo = new Archivo();
         archivo.leerArchivoTh(chooser.getName());
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cargarMapaBotonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton cargarMapaBoton;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelPrevisualizador;
+    private javax.swing.JButton siguienteBoton;
     // End of variables declaration//GEN-END:variables
 
-    public void mostrarMensajeDeCargaDeArchivo() {
-        String mensajeInformativo = "Debe de subir un archivo con extensión .th, el formato debe ser el siguiente:”\n"
+    public JTextArea mostrarMensajeDeCargaDeArchivo() {
+        String mensajeInformativo = "Debe de subir un archivo con extensión \".th\", el formato debe ser el siguiente:”\n"
                 + "		“~ Indica la posicion de una casilla normal de agua.”\n"
                 + "		“B1 Indica la posición del barco de tamaño de una casilla”\n"
                 + "		“B2 Indica la posición del barco de tamaño de dos casillas”\n"
@@ -128,12 +129,19 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
                 + "		“O Indica la posición de una bomba tipo hecatombe”\n"
                 + "		“«id» Indica el número o palabra con el que se identificará el mapa, el nombre definido en un mapa no puede repetirse.";
 
-        JTextArea texto = new JTextArea(mensajeInformativo);
+        texto = new JTextArea(mensajeInformativo);
         texto.setBounds(50, 50, 300, 200);
         texto.setEditable(false);
+        return texto;
     }
 
-    private void mostrarMapas(JTextArea texto) {
+    private void mostrarMapas(JComponent texto) {
+        panelPrevisualizador.setLayout(borderLayout);
+        panelPrevisualizador.setBackground(Color.LIGHT_GRAY);
         panelPrevisualizador.add(texto);
+    }
+    
+    private void mostrarTexto() {
+        
     }
 }
