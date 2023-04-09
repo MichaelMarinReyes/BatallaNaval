@@ -17,6 +17,7 @@ com/backend/menus/IniciarPartida.class
 com/backend/bombas/Bomba.class
 com/frontend/ventanaymenus/ColeccionTablerosPanel$1.class
 com/frontend/ventanaymenus/FramePrincipal$4.class
+com/frontend/ventanaymenus/FramePrincipal$FondoPanel.class
 com/backend/menus/Puntaje.class
 com/backend/barcos/Pailebot.class
 com/backend/componentestablero/Casilla.class

@@ -1,12 +1,16 @@
 package com.frontend.ventanaymenus;
 
+import com.backend.principal.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -26,6 +30,11 @@ public class FramePrincipal extends javax.swing.JFrame {
     private JTextField nombreUsuario;
 
     BorderLayout border = new BorderLayout();
+    Usuario jugador = new Usuario();
+    IniciarPartidaPanel iniciarPanel = new IniciarPartidaPanel();
+    NuevaPartidaPanel nuevaPanel = new NuevaPartidaPanel();
+    PuntajesPanel puntajesPanel = new PuntajesPanel();
+    ColeccionTablerosPanel tablerosPanel = new ColeccionTablerosPanel();
 
     /**
      * Creates new form FramePrincipal
@@ -59,7 +68,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        panelContenedor = new javax.swing.JPanel();
+        panelContenedor = new FondoPanel();
         panelBotones = new javax.swing.JPanel();
         iniciarBoton = new javax.swing.JButton();
         nuevaBoton = new javax.swing.JButton();
@@ -184,7 +193,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBotonActionPerformed
-        IniciarPartidaPanel iniciarPanel = new IniciarPartidaPanel();
         pintarPanel(iniciarPanel);
         iniciarBoton.setEnabled(false);
         nuevaBoton.setVisible(false);
@@ -196,7 +204,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_iniciarBotonActionPerformed
 
     private void nuevaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaBotonActionPerformed
-        NuevaPartidaPanel nuevaPanel = new NuevaPartidaPanel();
         pintarPanel(nuevaPanel);
         iniciarBoton.setVisible(true);
         nuevaBoton.setEnabled(false);
@@ -208,7 +215,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_nuevaBotonActionPerformed
 
     private void puntajesBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntajesBotonActionPerformed
-        PuntajesPanel puntajesPanel = new PuntajesPanel();
         pintarPanel(puntajesPanel);
         iniciarBoton.setVisible(false);
         nuevaBoton.setVisible(false);
@@ -220,7 +226,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_puntajesBotonActionPerformed
 
     private void tablerosbotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tablerosbotonActionPerformed
-        ColeccionTablerosPanel tablerosPanel = new ColeccionTablerosPanel();
         pintarPanel(tablerosPanel);
         iniciarBoton.setVisible(false);
         nuevaBoton.setVisible(false);
@@ -273,26 +278,28 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     public void registrarJugador() {
         this.getContentPane().add(panelContenedor);
-        etiqueta = new JLabel("Ingresa tu Nombre o Nick:", SwingConstants.CENTER);
+        etiqueta = new JLabel("INGRESA TU NOMBRE O NICK", SwingConstants.CENTER);
         botonRegistrar = new JButton("Registrar");
         nombreUsuario = new JTextField();
 
-        etiqueta.setForeground(Color.white);
-        etiqueta.setBounds(580, 120, 200, 40);
+        etiqueta.setForeground(Color.CYAN);
+        etiqueta.setBounds(panelContenedor.getWidth() / 2 - 50, panelContenedor.getHeight() / 2 - 200, 200, 40);
 
-        nombreUsuario.setBounds(580, 190, 200, 30);
+        nombreUsuario.setBounds(panelContenedor.getWidth() / 2 - 50, panelContenedor.getHeight() / 2 - 150, 200, 30);
 
         ActionListener accion = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 //nombre = nombreUsuario.getText();
                 panelContenedor.setLayout(border);
+                jugador.setNombre(nombreUsuario.getText());
+                puntajesPanel.copiarDatos(jugador.getNombre(), jugador.getPuntos());
                 JOptionPane.showMessageDialog(null, "Bienvenido " + nombreUsuario.getText() + " dirigete a Nueva Partida para comenzar a jugar");
                 habilitarDespuesDeRegistro();
             }
         };
 
-        botonRegistrar.setBounds(620, 290, 100, 30);
+        botonRegistrar.setBounds(panelContenedor.getWidth() / 2 - 20, panelContenedor.getHeight() / 2 - 50, 100, 30);
         botonRegistrar.setBackground(Color.green);
         botonRegistrar.addActionListener(accion);
 
@@ -346,7 +353,22 @@ public class FramePrincipal extends javax.swing.JFrame {
         puntajesBoton.setVisible(false);
         tablerosboton.setVisible(false);
     }
+
     public String getNombre() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    class FondoPanel extends JPanel {
+
+        private Image imagen;
+
+        @Override
+        public void paint(Graphics g) {
+            imagen = new ImageIcon(getClass().getResource("/com/imagenes/imagenBatallaNaval.png")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+
+            setOpaque(false);
+            super.paint(g);
+        }
     }
 }

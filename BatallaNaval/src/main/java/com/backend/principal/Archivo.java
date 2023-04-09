@@ -1,5 +1,6 @@
 package com.backend.principal;
 
+import com.backend.componentestablero.Tablero;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -9,11 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTextArea;
 
 /**
  *
@@ -43,23 +40,42 @@ public class Archivo {
     }
 
     public void leerArchivoTh(String nombreArchivo) { //Para crear mapas
-        File arhivo;
-        BufferedReader bufer = null;
+        File f;
+        BufferedReader br = null;
         String cadena;
-        arhivo = new File(nombreArchivo + ".avn");
-        
-        if (arhivo.exists()) {
-            int conteo = 1;
+        String[] verificarExtension = nombreArchivo.split("\\.");
+        f = new File(verificarExtension[0] + ".th");
+        Tablero nuevo = null;
+        int torpedos = 0;
+        int misiles = 0;
+        int hecatombes = 0;
+        if (f.exists()) {
             try {
-                bufer = new BufferedReader(new FileReader(arhivo));
-                while ((cadena = bufer.readLine()) != null) {
+                br = new BufferedReader(new FileReader(f));
+                while ((cadena = br.readLine()) != null) {
                     System.out.println(cadena);
+                    if (cadena.contains("tablero") || cadena.contains("Tablero") || cadena.contains("TABLERO")) {
+                        String[] identificador = cadena.split("<<");
+                        String[] nombreId = identificador[1].split(">>");
+                        //enviar nombreId para guardarMapa
+                    } else if (cadena.contains("tablero") || cadena.contains("Tablero") || cadena.contains("TABLERO")) {
+                        String[] dimension1 = cadena.split(" ");
+                        String[] dimensiones = dimension1[1].split("x");
+                        //ENVIAR DIMENSIONES A TABLERO
+                        //nuevo = new Tablero(Integer.parseInt(dimensiones[0]), Integer.parseInt(dimensiones[1]));
+                        //nuevo.crearTableroVacio();
+                        torpedos = 0;
+                    }
+                    /*else if (nuevo != null) {
+                        //nuevo.agregarLinea(cadena, conteo);
+                        conteo++;
+                    }*/
                 }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Archivo no encontrado o nombre incorrecto");
+            JOptionPane.showMessageDialog(null, "Archivo inexistente o nombre incorrecto");
         }
     }
 

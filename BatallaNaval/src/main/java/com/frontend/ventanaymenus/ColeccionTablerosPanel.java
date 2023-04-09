@@ -1,14 +1,21 @@
 package com.frontend.ventanaymenus;
 
 import com.backend.principal.Archivo;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.JComponent;
 import javax.swing.JFileChooser;
+import javax.swing.JTextArea;
 
 /**
  *
  * @author michael
  */
 public class ColeccionTablerosPanel extends javax.swing.JPanel {
+
+    private JTextArea texto;
+
+    BorderLayout borderLayout = new BorderLayout();
 
     /**
      * Creates new form ColeccionTablerosPanel
@@ -17,6 +24,7 @@ public class ColeccionTablerosPanel extends javax.swing.JPanel {
         initComponents();
         setVisible(true);
         panelBotones.setBackground(Color.DARK_GRAY);
+        mostrarMapas(mostrarMensajeDeCargaDeArchivo());
     }
 
     /**
@@ -85,7 +93,7 @@ public class ColeccionTablerosPanel extends javax.swing.JPanel {
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         Archivo archivo = new Archivo();
-        archivo.leerArchivoTh(chooser.getName());
+        archivo.leerArchivoTh(chooser.getSelectedFile().getAbsolutePath());
     }//GEN-LAST:event_botonCargarActionPerformed
 
 
@@ -94,4 +102,36 @@ public class ColeccionTablerosPanel extends javax.swing.JPanel {
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelVisualizador;
     // End of variables declaration//GEN-END:variables
+
+    public JTextArea mostrarMensajeDeCargaDeArchivo() {
+        String mensajeInformativo = "Debe de subir un archivo con extensión \".th\", el formato debe ser el siguiente:”\n\n"
+                + "		“~ Indica la posicion de una casilla normal de agua.”\n"
+                + "		“B1 Indica la posición del barco de tamaño de una casilla”\n"
+                + "		“B2 Indica la posición del barco de tamaño de dos casillas”\n"
+                + "		“B3 Indica la posición del barco de tamaño de tres casillas”\n"
+                + "		“T Indica la posición de una bomba tipo torpedo”\n"
+                + "		“I Indica la posición de una bomba tipo misil”\n"
+                + "		“O Indica la posición de una bomba tipo hecatombe”\n"
+                + "		“«id» Indica el número o palabra con el que se identificará el mapa, el nombre definido en un mapa no puede repetirse.\n"
+                + "              \nEstructura en el archivo\n\n"
+                + "             tablero <<id>>\n"
+                + "             dimension 5x5\n"
+                + "             ~,B3,~,B1,~\n"
+                + "             ~,B3,~,B2,B2\n"
+                + "             ~,B3,~,T,~\n"
+                + "             I,~,O,~,~\n"
+                + "             ~,~,~,~,~\n"
+                + "\nRECUERDE GUARDAR EL MAPA CON EXTENSION \".th\"";
+
+        texto = new JTextArea(mensajeInformativo);
+        texto.setBounds(50, 50, 300, 200);
+        texto.setEditable(false);
+        return texto;
+    }
+
+    private void mostrarMapas(JComponent texto) {
+        panelVisualizador.setLayout(borderLayout);
+        panelVisualizador.setBackground(Color.LIGHT_GRAY);
+        panelVisualizador.add(texto);
+    }
 }

@@ -1,7 +1,5 @@
 package com.frontend.ventanaymenus;
 
-import com.backend.principal.Usuario;
-
 /**
  *
  * @author michael
@@ -31,11 +29,11 @@ public class PuntajesPanel extends javax.swing.JPanel {
 
         panelDatosJuego = new javax.swing.JPanel();
         panelDatosUsuario = new javax.swing.JPanel();
-        nombreTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        puntosTextField = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        mostrarNombre = new javax.swing.JLabel();
+        mostrarPuntos = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -46,17 +44,6 @@ public class PuntajesPanel extends javax.swing.JPanel {
         panelDatosUsuario.setBackground(new java.awt.Color(255, 255, 102));
         panelDatosUsuario.setLayout(new java.awt.GridBagLayout());
 
-        nombreTextField.setEditable(false);
-        nombreTextField.setForeground(new java.awt.Color(0, 0, 0));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 82;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(1, 6, 0, 0);
-        panelDatosUsuario.add(nombreTextField, gridBagConstraints);
-
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Usuario:");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -66,7 +53,7 @@ public class PuntajesPanel extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 6;
         gridBagConstraints.ipady = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(0, 25, 0, 0);
         panelDatosUsuario.add(jLabel1, gridBagConstraints);
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -75,19 +62,8 @@ public class PuntajesPanel extends javax.swing.JPanel {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 51, 0, 0);
         panelDatosUsuario.add(jLabel2, gridBagConstraints);
-
-        puntosTextField.setEditable(false);
-        puntosTextField.setForeground(new java.awt.Color(0, 0, 0));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 21;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(1, 18, 0, 0);
-        panelDatosUsuario.add(puntosTextField, gridBagConstraints);
 
         jButton2.setText("Descargar");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -95,8 +71,25 @@ public class PuntajesPanel extends javax.swing.JPanel {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(1, 18, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(1, 41, 0, 60);
         panelDatosUsuario.add(jButton2, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 100;
+        gridBagConstraints.ipady = 18;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 29, 0, 0);
+        panelDatosUsuario.add(mostrarNombre, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.ipadx = 50;
+        gridBagConstraints.ipady = 18;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
+        panelDatosUsuario.add(mostrarPuntos, gridBagConstraints);
 
         add(panelDatosUsuario, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
@@ -106,10 +99,10 @@ public class PuntajesPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField nombreTextField;
+    private javax.swing.JLabel mostrarNombre;
+    private javax.swing.JLabel mostrarPuntos;
     private javax.swing.JPanel panelDatosJuego;
     private javax.swing.JPanel panelDatosUsuario;
-    private javax.swing.JTextField puntosTextField;
     // End of variables declaration//GEN-END:variables
 
     public void copiarDatos(String nombre, int puntos) {
@@ -118,8 +111,8 @@ public class PuntajesPanel extends javax.swing.JPanel {
     }
     
     private void mostrarNombrePuntos() {
-        nombreTextField.setText(nombre);
-        puntosTextField.setText(Integer.toString(puntos));
+        mostrarNombre.setText(this.nombre);
+        mostrarPuntos.setText(Integer.toString(puntos));
     }
     
 }
