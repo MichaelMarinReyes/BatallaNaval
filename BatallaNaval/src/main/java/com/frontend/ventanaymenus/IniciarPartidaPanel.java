@@ -1,15 +1,19 @@
 package com.frontend.ventanaymenus;
 
+import com.backend.principal.Usuario;
+
 /**
  *
  * @author michael
  */
 public class IniciarPartidaPanel extends javax.swing.JPanel {
+    private Usuario jugador;
 
     /**
      * Creates new form IniciarPartidaPanel
      */
-    public IniciarPartidaPanel() {
+    public IniciarPartidaPanel(Usuario jugador) {
+        jugador = new Usuario("", 0);
         initComponents();
         setVisible(true);
     }

@@ -3,6 +3,7 @@ package com.frontend.ventanaymenus;
 import com.backend.principal.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -15,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
@@ -28,13 +30,12 @@ public class FramePrincipal extends javax.swing.JFrame {
     private JLabel etiqueta;
     private JButton botonRegistrar;
     private JTextField nombreUsuario;
-
-    BorderLayout border = new BorderLayout();
-    Usuario jugador = new Usuario();
-    IniciarPartidaPanel iniciarPanel = new IniciarPartidaPanel();
-    NuevaPartidaPanel nuevaPanel = new NuevaPartidaPanel();
-    PuntajesPanel puntajesPanel = new PuntajesPanel();
-    ColeccionTablerosPanel tablerosPanel = new ColeccionTablerosPanel();
+    private Usuario jugador;
+    private IniciarPartidaPanel iniciarPanel;
+    private NuevaPartidaPanel nuevaPanel;
+    private PuntajesPanel puntajesPanel = new PuntajesPanel(jugador);
+    private ColeccionTablerosPanel tablerosPanel;
+    private JTextArea texto;
 
     /**
      * Creates new form FramePrincipal
@@ -193,6 +194,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBotonActionPerformed
+        iniciarPanel = new IniciarPartidaPanel(jugador);
         pintarPanel(iniciarPanel);
         iniciarBoton.setEnabled(false);
         nuevaBoton.setVisible(false);
@@ -204,7 +206,9 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_iniciarBotonActionPerformed
 
     private void nuevaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaBotonActionPerformed
+        nuevaPanel = new NuevaPartidaPanel();
         pintarPanel(nuevaPanel);
+        JOptionPane.showMessageDialog(null, mostrarMensajeDeCargaDeArchivo());
         iniciarBoton.setVisible(true);
         nuevaBoton.setEnabled(false);
         puntajesBoton.setVisible(false);
@@ -215,6 +219,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_nuevaBotonActionPerformed
 
     private void puntajesBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntajesBotonActionPerformed
+
         pintarPanel(puntajesPanel);
         iniciarBoton.setVisible(false);
         nuevaBoton.setVisible(false);
@@ -223,10 +228,13 @@ public class FramePrincipal extends javax.swing.JFrame {
         salirBoton.setVisible(false);
         regresarBoton.setVisible(true);
         regresarBoton.setEnabled(true);
+        puntajesPanel.mostrarNombrePuntos();
     }//GEN-LAST:event_puntajesBotonActionPerformed
 
     private void tablerosbotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tablerosbotonActionPerformed
+        tablerosPanel = new ColeccionTablerosPanel(jugador);
         pintarPanel(tablerosPanel);
+        JOptionPane.showMessageDialog(null, mostrarMensajeDeCargaDeArchivo());
         iniciarBoton.setVisible(false);
         nuevaBoton.setVisible(false);
         puntajesBoton.setVisible(false);
@@ -241,7 +249,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_salirBotonActionPerformed
 
     private void regresarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarBotonActionPerformed
-        panelContenedor.setLayout(border);
+        panelContenedor.setLayout(new BorderLayout());
         panelContenedor.removeAll();
         panelContenedor.repaint();
         panelContenedor.revalidate();
@@ -283,23 +291,23 @@ public class FramePrincipal extends javax.swing.JFrame {
         nombreUsuario = new JTextField();
 
         etiqueta.setForeground(Color.CYAN);
-        etiqueta.setBounds(panelContenedor.getWidth() / 2 - 50, panelContenedor.getHeight() / 2 - 200, 200, 40);
+        etiqueta.setFont(new Font("Liberation Sans", Font.BOLD, 16));
+        etiqueta.setBounds(panelContenedor.getWidth() / 2 - 100, panelContenedor.getHeight() / 2 - 120, 250, 40);
 
-        nombreUsuario.setBounds(panelContenedor.getWidth() / 2 - 50, panelContenedor.getHeight() / 2 - 150, 200, 30);
+        nombreUsuario.setBounds(panelContenedor.getWidth() / 2 - 80, panelContenedor.getHeight() / 2 - 70, 200, 30);
 
         ActionListener accion = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                //nombre = nombreUsuario.getText();
-                panelContenedor.setLayout(border);
-                jugador.setNombre(nombreUsuario.getText());
+                panelContenedor.setLayout(new BorderLayout());
+                jugador = new Usuario(nombreUsuario.getText(), 0);
                 puntajesPanel.copiarDatos(jugador.getNombre(), jugador.getPuntos());
                 JOptionPane.showMessageDialog(null, "Bienvenido " + nombreUsuario.getText() + " dirigete a Nueva Partida para comenzar a jugar");
                 habilitarDespuesDeRegistro();
             }
         };
 
-        botonRegistrar.setBounds(panelContenedor.getWidth() / 2 - 20, panelContenedor.getHeight() / 2 - 50, 100, 30);
+        botonRegistrar.setBounds(panelContenedor.getWidth() / 2 - 20, panelContenedor.getHeight() / 2, 100, 30);
         botonRegistrar.setBackground(Color.green);
         botonRegistrar.addActionListener(accion);
 
@@ -310,7 +318,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
 
     private void pintarPanel(JPanel panel) {
-        panelContenedor.setLayout(border);
+        panelContenedor.setLayout(new BorderLayout());
         panelContenedor.removeAll();
         panelContenedor.add(panel);
         panelContenedor.repaint();
@@ -327,7 +335,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
 
     private void habilitarDespuesDeRegistro() {
-        panelContenedor.setLayout(border);
+        panelContenedor.setLayout(new BorderLayout());
         panelContenedor.removeAll();
         panelContenedor.repaint();
         panelContenedor.revalidate();
@@ -356,6 +364,34 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     public String getNombre() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private JTextArea mostrarMensajeDeCargaDeArchivo() {
+        String mensajeInformativo = "Debe de subir un archivo con extensión \".th\", el formato debe ser el siguiente:”\n\n"
+                + "		“~ Indica la posicion de una casilla normal de agua.”\n"
+                + "		“B1 Indica la posición del barco de tamaño de una casilla”\n"
+                + "		“B2 Indica la posición del barco de tamaño de dos casillas”\n"
+                + "		“B3 Indica la posición del barco de tamaño de tres casillas”\n"
+                + "		“T Indica la posición de una bomba tipo torpedo”\n"
+                + "		“I Indica la posición de una bomba tipo misil”\n"
+                + "		“O Indica la posición de una bomba tipo hecatombe”\n"
+                + "		“«id» Indica el número o palabra con el que se identificará el mapa, el nombre definido en un mapa no puede repetirse.\n"
+                + "              \nEstructura en el archivo\n\n"
+                + "             tablero <<id>>\n"
+                + "             dimension 5x5\n"
+                + "             ~,B3,~,B1,~\n"
+                + "             ~,B3,~,B2,B2\n"
+                + "             ~,B3,~,T,~\n"
+                + "             I,~,O,~,~\n"
+                + "             ~,~,~,~,~\n"
+                + "\nRECUERDE GUARDAR EL MAPA CON EXTENSION \".th\"";
+
+        texto = new JTextArea(mensajeInformativo);
+        texto.setBounds(50, 50, 300, 200);
+        texto.setOpaque(true);
+        texto.setBackground(Color.WHITE);
+        texto.setEditable(false);
+        return texto;
     }
 
     class FondoPanel extends JPanel {

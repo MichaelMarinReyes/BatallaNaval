@@ -28,6 +28,7 @@ public class Casilla extends JButton {
     public Casilla(int tamaño) {
         this.tamaño = tamaño;
         this.imagen = new ImageIcon(getClass().getResource(IMAGEN_AGUA)).getImage();
+        this.setSize(tamaño, tamaño);
     }
 
     public int getTamaño() {
@@ -61,7 +62,6 @@ public class Casilla extends JButton {
     public void setTieneBomba(boolean tieneBomba) {
         this.tieneBomba = tieneBomba;
     }
-    
     
     
     public void cambiarImagen(String path) {

@@ -45,7 +45,7 @@ public class Archivo {
         String cadena;
         String[] verificarExtension = nombreArchivo.split("\\.");
         f = new File(verificarExtension[0] + ".th");
-        Tablero nuevo = null;
+        Tablero nuevoTablero = null;
         int torpedos = 0;
         int misiles = 0;
         int hecatombes = 0;
@@ -53,20 +53,24 @@ public class Archivo {
             try {
                 br = new BufferedReader(new FileReader(f));
                 while ((cadena = br.readLine()) != null) {
-                    System.out.println(cadena);
+                    String id = " ";
                     if (cadena.contains("tablero") || cadena.contains("Tablero") || cadena.contains("TABLERO")) {
+                       System.out.println(cadena);
                         String[] identificador = cadena.split("<<");
                         String[] nombreId = identificador[1].split(">>");
-                        //enviar nombreId para guardarMapa
-                    } else if (cadena.contains("tablero") || cadena.contains("Tablero") || cadena.contains("TABLERO")) {
+                        id = nombreId[0];
+                        System.out.println(id);
+                    } else if (cadena.contains("dimension") || cadena.contains("Dimension") || cadena.contains("DIMENSION")) {
                         String[] dimension1 = cadena.split(" ");
-                        String[] dimensiones = dimension1[1].split("x");
-                        //ENVIAR DIMENSIONES A TABLERO
-                        //nuevo = new Tablero(Integer.parseInt(dimensiones[0]), Integer.parseInt(dimensiones[1]));
-                        //nuevo.crearTableroVacio();
+                        System.out.println(dimension1[1]);
+                        String[] dimensiones = dimension1[1].split("X");
+                        System.out.println("x "+dimensiones[0] + "\nY " + dimensiones[1]);
+
+                        nuevoTablero = new Tablero(id, Integer.parseInt(dimensiones[0]), Integer.parseInt(dimensiones[1]));
+                        nuevoTablero.crearTablero();
                         torpedos = 0;
                     }
-                    /*else if (nuevo != null) {
+                    /*else if (nuevoTablero != null) {
                         //nuevo.agregarLinea(cadena, conteo);
                         conteo++;
                     }*/
@@ -77,6 +81,7 @@ public class Archivo {
         } else {
             JOptionPane.showMessageDialog(null, "Archivo inexistente o nombre incorrecto");
         }
+        
     }
 
     public void crearArchivoWar(String nombre, int puntos) { // para punteos

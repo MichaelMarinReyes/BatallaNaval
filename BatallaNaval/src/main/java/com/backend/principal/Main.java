@@ -1,6 +1,6 @@
 package com.backend.principal;
 
-import com.backend.menus.MenuPrincipal;
+import com.frontend.ventanaymenus.FramePrincipal;
 
 /**
  *
@@ -9,7 +9,7 @@ import com.backend.menus.MenuPrincipal;
 public class Main {
 
     public static void main(String[] args) {
-        MenuPrincipal juego = new MenuPrincipal();
-        juego.mostrarVentana();
+        FramePrincipal ventana = new FramePrincipal();
+        ventana.setVisible(true);
     }
 }

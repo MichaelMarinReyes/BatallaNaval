@@ -1,6 +1,7 @@
 package com.frontend.ventanaymenus;
 
 import com.backend.principal.Archivo;
+import com.backend.principal.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JComponent;
@@ -13,6 +14,7 @@ import javax.swing.JTextArea;
  */
 public class ColeccionTablerosPanel extends javax.swing.JPanel {
 
+    private Usuario jugador;
     private JTextArea texto;
 
     BorderLayout borderLayout = new BorderLayout();
@@ -20,7 +22,8 @@ public class ColeccionTablerosPanel extends javax.swing.JPanel {
     /**
      * Creates new form ColeccionTablerosPanel
      */
-    public ColeccionTablerosPanel() {
+    public ColeccionTablerosPanel(Usuario jugador) {
+        jugador = new Usuario("", 0);
         initComponents();
         setVisible(true);
         panelBotones.setBackground(Color.DARK_GRAY);

@@ -1,8 +1,14 @@
 package com.frontend.ventanaymenus;
 
+import com.backend.componentestablero.Casilla;
+import com.backend.componentestablero.Tablero;
 import com.backend.principal.Archivo;
+import com.backend.principal.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Toolkit;
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
@@ -14,6 +20,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class NuevaPartidaPanel extends javax.swing.JPanel {
 
+    private Usuario jugador;
     private JTextArea texto;
     BorderLayout borderLayout = new BorderLayout();
 
@@ -21,10 +28,10 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
      * Creates new form NuevaPartida
      */
     public NuevaPartidaPanel() {
+        jugador = new Usuario("", 0);
         initComponents();
         setVisible(true);
         panelBotones.setBackground(Color.DARK_GRAY);
-        mostrarMapas(mostrarMensajeDeCargaDeArchivo());
     }
 
     /**
@@ -107,12 +114,13 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
     private void cargarMapaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarMapaBotonActionPerformed
         JFileChooser archivoSeleccionado = new JFileChooser();
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TH", ".th");
-        
+
         //archivoSeleccionado.setFileFilter(filtro);
         archivoSeleccionado.showOpenDialog(null);
-        System.out.println(archivoSeleccionado.getSelectedFile().getAbsolutePath());
         Archivo archivo = new Archivo();
         archivo.leerArchivoTh(archivoSeleccionado.getSelectedFile().getAbsolutePath());
+        Tablero tablero = new Tablero("", 6, 6);
+        mostrarTablero((Casilla[][]) tablero.crearTablero());
     }//GEN-LAST:event_cargarMapaBotonActionPerformed
 
 
@@ -123,35 +131,31 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
     private javax.swing.JButton siguienteBoton;
     // End of variables declaration//GEN-END:variables
 
-    public JTextArea mostrarMensajeDeCargaDeArchivo() {
-        String mensajeInformativo = "Debe de subir un archivo con extensión \".th\", el formato debe ser el siguiente:”\n\n"
-                + "		“~ Indica la posicion de una casilla normal de agua.”\n"
-                + "		“B1 Indica la posición del barco de tamaño de una casilla”\n"
-                + "		“B2 Indica la posición del barco de tamaño de dos casillas”\n"
-                + "		“B3 Indica la posición del barco de tamaño de tres casillas”\n"
-                + "		“T Indica la posición de una bomba tipo torpedo”\n"
-                + "		“I Indica la posición de una bomba tipo misil”\n"
-                + "		“O Indica la posición de una bomba tipo hecatombe”\n"
-                + "		“«id» Indica el número o palabra con el que se identificará el mapa, el nombre definido en un mapa no puede repetirse.\n"
-                + "              \nEstructura en el archivo\n\n"
-                + "             tablero <<id>>\n"
-                + "             dimension 5x5\n"
-                + "             ~,B3,~,B1,~\n"
-                + "             ~,B3,~,B2,B2\n"
-                + "             ~,B3,~,T,~\n"
-                + "             I,~,O,~,~\n"
-                + "             ~,~,~,~,~\n"
-                + "\nRECUERDE GUARDAR EL MAPA CON EXTENSION \".th\"";
+    public void mostrarMapas(JComponent texto) {
+        FramePrincipal principal = new FramePrincipal();
+        //panelPrevisualizador.setLocation((principal.getWidth() / 2) - 400, (principal.getHeight() / 2) - 250);
 
-        texto = new JTextArea(mensajeInformativo);
-        texto.setBounds(50, 50, 300, 200);
-        texto.setEditable(false);
-        return texto;
-    }
-
-    private void mostrarMapas(JComponent texto) {
-        panelPrevisualizador.setLayout(borderLayout);
+        panelPrevisualizador.remove(texto);
+        panelPrevisualizador.setLayout(new FlowLayout());
+        //panelPrevisualizador.setSize(new Dimension(900, 500));
         panelPrevisualizador.setBackground(Color.LIGHT_GRAY);
         panelPrevisualizador.add(texto);
+    }
+
+    public void mostrarTablero(Casilla[][] mapa) {
+        int tamaño = ((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / mapa.length)) * 2 / 3;
+        int posicionX = 10;
+        int posicionY = 10;
+        for (int i = 0; i < mapa.length; i++) {
+            for (int j = 0; j < mapa[i].length; j++) {
+                mapa[i][j] = new Casilla(tamaño);
+                mapa[i][j].setBounds(posicionX, posicionY, tamaño, tamaño);
+                mostrarMapas(mapa[i][j]);
+                posicionX += tamaño + 5;
+            }
+            posicionX = 10;
+            posicionY += tamaño + 5;
+        }
+
     }
 }
