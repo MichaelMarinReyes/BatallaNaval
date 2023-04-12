@@ -6,14 +6,18 @@ com/backend/principal/DinamicaJuego.class
 com/frontend/ventanaymenus/ColeccionTablerosPanel.class
 com/backend/barcos/Navio.class
 com/backend/barcos/Bergantin.class
+com/frontend/ventanaymenus/PuntajesPanel$2.class
 com/frontend/ventanaymenus/FramePrincipal.class
+com/backend/bombas/Misil.class
 com/frontend/ventanaymenus/FramePrincipal$3.class
+com/backend/bombas/Hecatombe.class
 com/backend/menus/NuevaPartida.class
 com/backend/principal/Usuario.class
 com/frontend/ventanaymenus/NuevaPartidaPanel.class
 com/frontend/ventanaymenus/FramePrincipal$1.class
 com/frontend/ventanaymenus/FramePrincipal$6.class
 com/frontend/ventanaymenus/IniciarPartidaPanel.class
+com/frontend/ventanaymenus/PuntajesPanel$1.class
 com/backend/menus/IniciarPartida.class
 com/backend/bombas/Bomba.class
 com/frontend/ventanaymenus/ColeccionTablerosPanel$1.class
@@ -21,6 +25,7 @@ com/frontend/ventanaymenus/FramePrincipal$4.class
 com/frontend/ventanaymenus/FramePrincipal$FondoPanel.class
 com/backend/menus/Puntaje.class
 com/backend/barcos/Pailebot.class
+com/backend/bombas/BombaNormal.class
 com/backend/componentestablero/Casilla.class
 com/frontend/ventanaymenus/FramePrincipal$8.class
 com/frontend/ventanaymenus/NuevaPartidaPanel$1.class
