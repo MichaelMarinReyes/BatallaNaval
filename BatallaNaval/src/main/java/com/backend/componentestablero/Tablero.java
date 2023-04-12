@@ -1,6 +1,7 @@
 package com.backend.componentestablero;
 
-import com.backend.barcos.Barco;
+import com.backend.barcos.*;
+import com.backend.bombas.*;
 import com.frontend.ventanaymenus.NuevaPartidaPanel;
 import java.awt.Toolkit;
 import java.io.IOException;
@@ -58,24 +59,30 @@ public class Tablero {
                     casillas[i][j].setPosicionY(i);
 
                     if (caracteres[j].equals("~")) {
-                        casillas[i][j].setTieneBomba(false);
+                        casillas[i][j] = new Agua(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
 
                     } else if (caracteres[j].equals("T")) {
+                        casillas[i][j] = new BombaNormal(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
                         casillas[i][j].setTieneBomba(true);
-
+                        
                     } else if (caracteres[i].equals("I")) {
+                        casillas[i][j] = new Misil(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
                         casillas[i][j].setTieneBomba(true);
+                    
                     } else if (caracteres[i].equals("O")) {
+                        casillas[i][j] = new Hecatombe(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
                         casillas[i][j].setTieneBomba(true);
+                        
                     } else if (caracteres[i].equals("B1")) {
-                        //MARCAR QUE EL BARCO ES TAMAÑO 1
-                    } else if (caracteres[i].equals("B2")) {
-                        //MARCAR QUE EL BARCO ES TAMAÑO 2
-                    } else if (caracteres[i].equals("B3")) {
-                        //MARCARA QUE EL BARCO ES TAMAÑO 3
-                    }
+                        casillas[i][j] = new Pailebot(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
 
-                    //casillas[i][j].setTieneBomba(true) = caracteres[j].equalsIgnoreCase("O");
+                    } else if (caracteres[i].equals("B2")) {
+                        casillas[i][j] = new Bergantin(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
+
+                    } else if (caracteres[i].equals("B3")) {
+                        casillas[i][j] = new Navio(((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / casillas.length)) * 2 / 3);
+                        
+                    }
                 }
                 guardarMapas(casillas);
             }

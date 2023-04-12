@@ -33,11 +33,8 @@ public class PuntajesPanel extends javax.swing.JPanel {
 
         panelDatosJuego = new javax.swing.JPanel();
         panelDatosUsuario = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        mostrarPuntos = new javax.swing.JLabel();
-        mostrarNombre = new javax.swing.JLabel();
+        puntosBoton = new javax.swing.JButton();
+        historialBoton = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -48,62 +45,21 @@ public class PuntajesPanel extends javax.swing.JPanel {
         panelDatosUsuario.setPreferredSize(new java.awt.Dimension(644, 35));
         panelDatosUsuario.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Usuario:");
-        jLabel1.setMaximumSize(new java.awt.Dimension(53, 18));
-        jLabel1.setMinimumSize(new java.awt.Dimension(53, 18));
+        puntosBoton.setText("Puntos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 23;
-        gridBagConstraints.ipady = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 23, 0, 0);
-        panelDatosUsuario.add(jLabel1, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(0, 19, 7, 0);
+        panelDatosUsuario.add(puntosBoton, gridBagConstraints);
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Puntaje:");
-        jLabel2.setPreferredSize(new java.awt.Dimension(54, 18));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
-        panelDatosUsuario.add(jLabel2, gridBagConstraints);
-
-        jButton2.setText("Descargar");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 106, 1, 89);
-        panelDatosUsuario.add(jButton2, gridBagConstraints);
-
-        mostrarPuntos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 50;
-        gridBagConstraints.ipady = 18;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 38, 0, 0);
-        panelDatosUsuario.add(mostrarPuntos, gridBagConstraints);
-
-        mostrarNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        historialBoton.setText("Registro");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 69;
-        gridBagConstraints.ipady = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
-        panelDatosUsuario.add(mostrarNombre, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(0, 18, 7, 438);
+        panelDatosUsuario.add(historialBoton, gridBagConstraints);
 
         panelDatosJuego.add(panelDatosUsuario, java.awt.BorderLayout.PAGE_START);
 
@@ -112,13 +68,10 @@ public class PuntajesPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel mostrarNombre;
-    private javax.swing.JLabel mostrarPuntos;
+    private javax.swing.JButton historialBoton;
     private javax.swing.JPanel panelDatosJuego;
     private javax.swing.JPanel panelDatosUsuario;
+    private javax.swing.JButton puntosBoton;
     // End of variables declaration//GEN-END:variables
 
     public void copiarDatos(String nombre, int puntos) {
@@ -127,8 +80,7 @@ public class PuntajesPanel extends javax.swing.JPanel {
     }
     
     public void mostrarNombrePuntos() {
-        mostrarNombre.setText(nombre);
-        mostrarPuntos.setText(Integer.toString(puntos));
+        
     }
     
 }

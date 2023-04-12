@@ -9,6 +9,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.ImageIcon;
@@ -288,6 +289,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         this.getContentPane().add(panelContenedor);
         etiqueta = new JLabel("INGRESA TU NOMBRE O NICK", SwingConstants.CENTER);
         botonRegistrar = new JButton("Registrar");
+        botonRegistrar.setMnemonic(KeyEvent.VK_ENTER);
         nombreUsuario = new JTextField();
 
         etiqueta.setForeground(Color.CYAN);
@@ -299,11 +301,16 @@ public class FramePrincipal extends javax.swing.JFrame {
         ActionListener accion = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                panelContenedor.setLayout(new BorderLayout());
-                jugador = new Usuario(nombreUsuario.getText(), 0);
-                puntajesPanel.copiarDatos(jugador.getNombre(), jugador.getPuntos());
-                JOptionPane.showMessageDialog(null, "Bienvenido " + nombreUsuario.getText() + " dirigete a Nueva Partida para comenzar a jugar");
-                habilitarDespuesDeRegistro();
+
+                if (nombreUsuario.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "Ingresa un usuario");
+                } else if (!nombreUsuario.getText().equals("")) {
+                    panelContenedor.setLayout(new BorderLayout());
+                    jugador = new Usuario(nombreUsuario.getText(), 0);
+                    puntajesPanel.copiarDatos(jugador.getNombre(), jugador.getPuntos());
+                    JOptionPane.showMessageDialog(null, "Bienvenido " + nombreUsuario.getText() + " dirigete a Nueva Partida para comenzar a jugar");
+                    habilitarDespuesDeRegistro();
+                }
             }
         };
 

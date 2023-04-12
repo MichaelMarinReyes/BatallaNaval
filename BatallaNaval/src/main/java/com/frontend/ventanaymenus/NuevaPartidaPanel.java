@@ -119,7 +119,7 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
         archivoSeleccionado.showOpenDialog(null);
         Archivo archivo = new Archivo();
         archivo.leerArchivoTh(archivoSeleccionado.getSelectedFile().getAbsolutePath());
-        Tablero tablero = new Tablero("", 6, 6);
+        Tablero tablero = new Tablero("", 8, 8);
         mostrarTablero((Casilla[][]) tablero.crearTablero());
     }//GEN-LAST:event_cargarMapaBotonActionPerformed
 
@@ -146,15 +146,21 @@ public class NuevaPartidaPanel extends javax.swing.JPanel {
         int tamaño = ((int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / mapa.length)) * 2 / 3;
         int posicionX = 10;
         int posicionY = 10;
+        int anchoCasilla;
+        int largoCasilla = 0;
+
         for (int i = 0; i < mapa.length; i++) {
+            anchoCasilla = panelPrevisualizador.getWidth() / mapa.length - 5;
             for (int j = 0; j < mapa[i].length; j++) {
+
+                largoCasilla = panelPrevisualizador.getHeight() / mapa[i].length - 5;
                 mapa[i][j] = new Casilla(tamaño);
-                mapa[i][j].setBounds(posicionX, posicionY, tamaño, tamaño);
+                mapa[i][j].setBounds(posicionX, posicionY, anchoCasilla, largoCasilla);
                 mostrarMapas(mapa[i][j]);
-                posicionX += tamaño + 5;
+                posicionX += anchoCasilla + 5;
             }
             posicionX = 10;
-            posicionY += tamaño + 5;
+            posicionY += largoCasilla + 5;
         }
 
     }
