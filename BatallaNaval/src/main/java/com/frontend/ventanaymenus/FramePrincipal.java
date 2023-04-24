@@ -34,7 +34,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     private Usuario jugador;
     private IniciarPartidaPanel iniciarPanel;
     private NuevaPartidaPanel nuevaPanel;
-    private PuntajesPanel puntajesPanel = new PuntajesPanel(jugador);
+    private PuntajesPanel puntajesPanel = new PuntajesPanel();
     private ColeccionTablerosPanel tablerosPanel;
     private JTextArea texto;
 
@@ -221,7 +221,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_nuevaBotonActionPerformed
 
     private void puntajesBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntajesBotonActionPerformed
-
         pintarPanel(puntajesPanel);
         iniciarBoton.setVisible(false);
         nuevaBoton.setVisible(false);
@@ -230,7 +229,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         salirBoton.setVisible(false);
         regresarBoton.setVisible(true);
         regresarBoton.setEnabled(true);
-        puntajesPanel.mostrarPuntajes();
     }//GEN-LAST:event_puntajesBotonActionPerformed
 
     private void tablerosbotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tablerosbotonActionPerformed
@@ -408,11 +406,17 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         @Override
         public void paint(Graphics g) {
-            imagen = new ImageIcon(getClass().getResource("/com/imagenes/imagenBatallaNaval.png")).getImage();
-            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            try {
 
-            setOpaque(false);
-            super.paint(g);
+                imagen = new ImageIcon(getClass().getResource("/com/imagenes/imagenBatallaNaval.png")).getImage();
+                g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+
+                setOpaque(false);
+                super.paint(g);
+
+            } catch (NullPointerException e) {
+                System.out.println("");
+            }
         }
     }
 }

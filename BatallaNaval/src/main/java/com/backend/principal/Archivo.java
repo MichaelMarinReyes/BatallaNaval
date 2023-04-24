@@ -1,7 +1,6 @@
 package com.backend.principal;
 
 import com.backend.componentestablero.Tablero;
-import com.frontend.ventanaymenus.PuntajesPanel;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,8 +18,9 @@ import javax.swing.JOptionPane;
 public class Archivo {
 
     private String pathAvn;
+    private String pathWar;
 
-    public void crearArchivoAvn(String nombreJugador, String accion, LocalTime hora) { //Registro del juego
+    public void crearArchivoAvn(String nombreJugador, String accion) { //Registro del juego
         File archivo = null;
         FileWriter escribir = null;
         PrintWriter linea = null;
@@ -35,7 +35,7 @@ public class Archivo {
                 linea.print("ACCIÓN: ");
                 linea.print(accion + ", ");
                 linea.print("HORA: ");
-                linea.println(hora.getHour() + ":" + hora.getMinute());
+                linea.println(LocalTime.now().getHour() + ":" + LocalTime.now().getMinute());
                 linea.close();
                 escribir.close();
             } else {
@@ -46,7 +46,7 @@ public class Archivo {
                 linea.print("ACCIÓN: ");
                 linea.print(accion + ", ");
                 linea.print("HORA: ");
-                linea.println(hora.getHour() + ":" + hora.getMinute());
+                linea.println(LocalTime.now().getHour() + ":" + LocalTime.now().getMinute());
                 linea.close();
                 escribir.close();
             }
@@ -63,32 +63,33 @@ public class Archivo {
             }
         }
         pathAvn = archivo.getAbsolutePath();
-        leerArchivoAvn(pathAvn);
+        //leerArchivoAvn();
     }
 
-    public void leerArchivoAvn(String path) {
+    public String leerArchivoAvn() {
         File arhivo;
         BufferedReader bufer = null;
         String cadena;
         String texto = "";
-        String temp = "";
-        arhivo = new File(path);
+        arhivo = new File(pathAvn);
         if (arhivo.exists()) {
-            int conteo = 1;
             try {
                 bufer = new BufferedReader(new FileReader(arhivo));
+                int contador = 1;
                 while ((cadena = bufer.readLine()) != null) {
-                    PuntajesPanel puntajes = new PuntajesPanel();
-                    puntajes.mostrarContenido(cadena);
+                    texto += contador + " " + cadena + "\n";
+                    contador++;
                 }
-                texto = temp;
+                bufer.close();
             } catch (IOException e) {
-                //System.out.println(e.getMessage());
+                System.out.println(e);
             }
         } else {
             JOptionPane.showMessageDialog(null, "Archivo Inexistente");
         }
+        return texto;
     }
+
     public void leerArchivoTh(String nombreArchivo) { //Para crear mapas
         File f;
         BufferedReader br = null;
@@ -115,7 +116,7 @@ public class Archivo {
                     }
                 }
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                JOptionPane.showMessageDialog(null, e.getMessage());
             }
         } else {
             JOptionPane.showMessageDialog(null, "Archivo inexistente o nombre incorrecto");
@@ -133,17 +134,16 @@ public class Archivo {
                 archivo.createNewFile();
                 escribir = new FileWriter(archivo, true);
                 linea = new PrintWriter(escribir);
-                linea.print("USUARIO, ");
-                linea.println("PUNTOS");
-                linea.print(nombre + ", ");
-                linea.println(puntos);
+                linea.print("***PUNTEOS***");
+                linea.print("USUARIO: " + nombre);
+                linea.println(", PUNTOS: " + puntos);
                 linea.close();
                 escribir.close();
             } else {
                 escribir = new FileWriter(archivo, true);
                 linea = new PrintWriter(escribir);
-                linea.print(nombre + ", ");
-                linea.println(puntos);
+                linea.print("USUARIO: " + nombre);
+                linea.println(", PUNTOS: " + puntos);
                 linea.close();
                 escribir.close();
             }
@@ -159,32 +159,29 @@ public class Archivo {
                 er.printStackTrace();
             }
         }
+        pathWar = archivo.getAbsolutePath();
+    }
 
+    public String leerWar() {
         File arhivoLeido;
         BufferedReader bufer = null;
         String cadena;
         String texto = "";
-        String temp = "";
-        arhivoLeido = new File(archivo.getAbsolutePath());
+        arhivoLeido = new File(pathWar);
         if (arhivoLeido.exists()) {
-            int conteo = 1;
             try {
                 bufer = new BufferedReader(new FileReader(arhivoLeido));
+                int contador = 1;
                 while ((cadena = bufer.readLine()) != null) {
-                    PuntajesPanel puntajes = new PuntajesPanel();
-                    puntajes.mostrarContenido(cadena);
+                    texto += contador + " " + cadena + "\n";
+                    contador++;
                 }
-                texto = temp;
             } catch (IOException e) {
-                //System.out.println(e.getMessage());
+                JOptionPane.showMessageDialog(null, e.getMessage());
             }
         } else {
-           JOptionPane.showMessageDialog(null, "Archivo inexistente");
+            JOptionPane.showMessageDialog(null, "Archivo inexistente");
         }
-    }
-
-    private boolean datosCorrectos(String cadena) {
-
-        return false;
+        return texto;
     }
 }

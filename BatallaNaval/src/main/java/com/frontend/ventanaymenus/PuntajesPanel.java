@@ -1,10 +1,14 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
 package com.frontend.ventanaymenus;
 
 import com.backend.principal.Archivo;
-import com.backend.principal.Usuario;
+import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.time.LocalTime;
+import java.awt.Component;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 /**
@@ -13,23 +17,26 @@ import javax.swing.JTextArea;
  */
 public class PuntajesPanel extends javax.swing.JPanel {
 
-    private Usuario jugador;
     private String nombre;
     private int puntos;
-    LocalTime hora = LocalTime.now();
+    private String accion = "Probando acciónes";
+    private Archivo archivos = new Archivo();
 
     /**
-     * Creates new form PuntajesPanel
+     * Creates new form PanelPuntajes
      */
-    public PuntajesPanel(Usuario jugador) {
-        jugador = new Usuario("", 0);
-        initComponents();
-        setVisible(true);
-    }
-
     public PuntajesPanel() {
         initComponents();
-        setVisible(true);
+        mostrarPuntajes();
+        mostrarHistorial();
+    }
+
+    public String getAccion() {
+        return accion;
+    }
+
+    public void setAccion(String accion) {
+        this.accion = accion;
     }
 
     /**
@@ -40,67 +47,54 @@ public class PuntajesPanel extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        panelDatosJuego = new javax.swing.JPanel();
-        panelBotones = new javax.swing.JPanel();
-        puntosBoton = new javax.swing.JButton();
-        historialBoton = new javax.swing.JButton();
+        panelContenedor = new javax.swing.JTabbedPane();
+        punteosPanel = new javax.swing.JPanel();
+        historialPanel = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
 
-        panelDatosJuego.setBackground(new java.awt.Color(102, 255, 102));
-        panelDatosJuego.setLayout(new java.awt.BorderLayout());
+        panelContenedor.setBackground(new java.awt.Color(153, 153, 153));
+        panelContenedor.setForeground(new java.awt.Color(0, 0, 0));
 
-        panelBotones.setBackground(new java.awt.Color(255, 255, 102));
-        panelBotones.setPreferredSize(new java.awt.Dimension(644, 35));
-        panelBotones.setLayout(new java.awt.GridBagLayout());
+        punteosPanel.setBackground(new java.awt.Color(51, 255, 255));
 
-        puntosBoton.setText("Puntos");
-        puntosBoton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                puntosBotonActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 19, 7, 0);
-        panelBotones.add(puntosBoton, gridBagConstraints);
+        javax.swing.GroupLayout punteosPanelLayout = new javax.swing.GroupLayout(punteosPanel);
+        punteosPanel.setLayout(punteosPanelLayout);
+        punteosPanelLayout.setHorizontalGroup(
+            punteosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 529, Short.MAX_VALUE)
+        );
+        punteosPanelLayout.setVerticalGroup(
+            punteosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
 
-        historialBoton.setText("Registro");
-        historialBoton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                historialBotonActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 18, 7, 438);
-        panelBotones.add(historialBoton, gridBagConstraints);
+        panelContenedor.addTab("Punteos", punteosPanel);
 
-        panelDatosJuego.add(panelBotones, java.awt.BorderLayout.PAGE_START);
+        historialPanel.setBackground(new java.awt.Color(51, 255, 255));
 
-        add(panelDatosJuego, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout historialPanelLayout = new javax.swing.GroupLayout(historialPanel);
+        historialPanel.setLayout(historialPanelLayout);
+        historialPanelLayout.setHorizontalGroup(
+            historialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 529, Short.MAX_VALUE)
+        );
+        historialPanelLayout.setVerticalGroup(
+            historialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+
+        panelContenedor.addTab("Historial", historialPanel);
+
+        add(panelContenedor, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void puntosBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntosBotonActionPerformed
-        mostrarPuntajes();
-    }//GEN-LAST:event_puntosBotonActionPerformed
-
-    private void historialBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historialBotonActionPerformed
-        mostrarHistorial();
-    }//GEN-LAST:event_historialBotonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton historialBoton;
-    private javax.swing.JPanel panelBotones;
-    private javax.swing.JPanel panelDatosJuego;
-    private javax.swing.JButton puntosBoton;
+    private javax.swing.JPanel historialPanel;
+    private javax.swing.JTabbedPane panelContenedor;
+    private javax.swing.JPanel punteosPanel;
     // End of variables declaration//GEN-END:variables
 
     public void copiarDatos(String nombre, int puntos) {
@@ -108,22 +102,26 @@ public class PuntajesPanel extends javax.swing.JPanel {
         this.puntos = puntos;
     }
 
-    public void mostrarPuntajes() {
-        Archivo avn = new Archivo();
-        avn.crearArchivoAvn("Michael", " ", hora);
+    private void mostrarPuntajes() {
+        archivos.crearArchivoWar(this.nombre, this.puntos);
+        JTextArea historial = new JTextArea(archivos.leerWar());
+        historial.setText(archivos.leerWar());
+        //historial.setBackground(Color.LIGHT_GRAY);
+        JScrollPane scroll = new JScrollPane(historial, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        punteosPanel.removeAll();
+        punteosPanel.setLayout(new BorderLayout());
+        punteosPanel.add(scroll);
     }
 
-    public void mostrarHistorial() {
-        Archivo war = new Archivo();
-        war.crearArchivoWar(" ", 0);
-    }
-
-    public void mostrarContenido(String texto) {
-        JTextArea textoLeido = new JTextArea(texto);
-        panelDatosJuego.removeAll();
-        panelDatosJuego.setLayout(new FlowLayout());
-        panelDatosJuego.setBackground(Color.LIGHT_GRAY);
-        panelDatosJuego.add(textoLeido);
+    private void mostrarHistorial() {
+        archivos.crearArchivoAvn(this.nombre, this.getAccion());
+        JTextArea registros = new JTextArea(archivos.leerArchivoAvn());
+        registros.setText(archivos.leerArchivoAvn());
+        //registros.setBackground(Color.LIGHT_GRAY);
+        JScrollPane scroll = new JScrollPane(registros, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        historialPanel.removeAll();
+        historialPanel.setLayout(new BorderLayout());
+        historialPanel.add(scroll);
     }
 
 }
